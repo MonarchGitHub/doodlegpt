@@ -1,38 +1,38 @@
-✏️ ChatGPT Doodle Overlay
+# ✏️ ChatGPT Doodle Overlay
 
-Draw directly on your ChatGPT conversations — with scroll-safe, persistent doodles.
+## Draw directly on your ChatGPT conversations — with scroll-safe, persistent doodles.
 
 This is a lightweight Chrome extension that lets you annotate ChatGPT chats with a drawing overlay that:
 
-Scrolls naturally with the conversation
+- Scrolls naturally with the conversation
 
-Saves doodles per chat
+- Saves doodles per chat
 
-Restores drawings automatically
+- Restores drawings automatically
 
-Works without breaking ChatGPT UI
+- Works without breaking ChatGPT UI
 
-🚀 Features
+# 🚀 Features
 
-🖊 Draw directly on ChatGPT
+## 🖊 Draw directly on ChatGPT
 
-🔄 Scroll-safe rendering (no disappearing strokes)
+## 🔄 Scroll-safe rendering (no disappearing strokes)
 
-💾 Per-conversation persistence
+## 💾 Per-conversation persistence
 
-🎨 Adjustable brush color & size
+## 🎨 Adjustable brush color & size
 
-🧠 Draw Mode / Type Mode toggle
+## 🧠 Draw Mode / Type Mode toggle
 
-🗑 Clear canvas
+## 🗑 Clear canvas
 
-📷 Export as PNG
+## 📷 Export as PNG
 
-🔌 Safe injection & fallback messaging
+## 🔌 Safe injection & fallback messaging
 
-🧩 Manifest V3 compatible
+## 🧩 Manifest V3 compatible
 
-📦 How It Works
+# 📦 How It Works
 
 The extension injects a canvas overlay into the main ChatGPT chat container.
 
