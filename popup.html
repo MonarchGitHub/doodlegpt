@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>ChatGPT Doodle</title>
+    <style>
+        :root {
+            --bg-1: #f5f7fb;
+            --bg-2: #e9eef7;
+            --ink: #0f172a;
+            --muted: #64748b;
+            --card: #ffffff;
+            --accent: #0a84ff;
+            --accent-2: #36a2ff;
+            --shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+            --ring: 0 0 0 3px rgba(10, 132, 255, 0.2);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 300px;
+            margin: 0;
+            padding: 14px;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Segoe UI", system-ui, Arial;
+            color: var(--ink);
+            background: radial-gradient(120% 120% at 0% 0%, var(--bg-1), var(--bg-2));
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .title {
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 0.2px;
+        }
+
+        .subtitle {
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .card {
+            background: var(--card);
+            border-radius: 16px;
+            padding: 12px;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(15, 23, 42, 0.05);
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 8px 4px;
+        }
+
+        label {
+            font-size: 13px;
+            color: var(--ink);
+            font-weight: 600;
+        }
+
+        .hint {
+            font-size: 12px;
+            color: var(--muted);
+            line-height: 1.35;
+        }
+
+        button {
+            border: 0;
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        /* iOS-inspired switch */
+        #toggle {
+            width: 52px;
+            height: 30px;
+            border-radius: 999px;
+            position: relative;
+            background: #e5e7eb;
+            transition: background 160ms ease;
+            text-indent: -9999px;
+            outline: none;
+        }
+
+        #toggle::after {
+            content: "";
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background: #ffffff;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 160ms ease;
+        }
+
+        #toggle.on {
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+        }
+
+        #toggle.on::after {
+            transform: translateX(22px);
+        }
+
+        #toggle:focus-visible {
+            box-shadow: var(--ring);
+        }
+
+        .primary {
+            width: 100%;
+            padding: 10px 12px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 13px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            color: white;
+            box-shadow: 0 6px 16px rgba(10, 132, 255, 0.28);
+        }
+
+        .primary:active {
+            transform: translateY(1px);
+        }
+
+        .divider {
+            height: 1px;
+            background: rgba(15, 23, 42, 0.08);
+            margin: 6px 0 4px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div>
+            <div class="title">ChatGPT Doodle</div>
+            <div class="subtitle">Draw right on the chat</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="row">
+            <label for="toggle">Overlay</label>
+            <button id="toggle" class="off">Toggle</button>
+        </div>
+        <div class="divider"></div>
+        <div class="row">
+            <button id="attachBtn" class="primary">Attach Inside Chat</button>
+        </div>
+        <div class="row">
+            <div class="hint">Open ChatGPT at chatgpt.com, then toggle the overlay. State is remembered.</div>
+        </div>
+    </div>
+
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
