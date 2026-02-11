@@ -1,5 +1,7 @@
 # ChatGPT Doodle Overlay
 
+![ChatGPT Doodle Demo](/demo.gif)
+
 Draw directly on your ChatGPT conversations with a lightweight, scroll-safe overlay that saves per chat.
 
 **Highlights**
